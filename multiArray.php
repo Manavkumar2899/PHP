@@ -42,6 +42,40 @@
                 ?>
             </tbody>
         </table>
+      </div>
+      
+      <div class="container">
+        <?php
+            $students = [
+                ["ali", 21, "karachi"],
+                ["hamza", 24, "lahore"],
+                ["shameer", 23, "hyderabad"]
+            ];
+           // print_r($students);
+           // echo $students[0][2] . " " . $students[2][0];
+        ?>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php
+                    for($i=0; $i<count($students); $i++){
+                    ?>
+                    <tr>
+                        <td><?php echo $students[$i][0] ?></td>
+                        <td><?php echo $students[$i][1] ?></td>
+                        <td><?php echo $students[$i][2] ?></td>
+                    </tr>
+                    <?php
+                    }
+                    ?>
+            </tbody>
+        </table>
       </div>   
   </body>
 </html>
